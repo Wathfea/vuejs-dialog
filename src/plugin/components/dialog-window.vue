@@ -15,9 +15,9 @@
 
                             <form v-if="isHardConfirm || isPrompt" class="dg-form" @submit.prevent="submitDialogForm">
                                 <label for="dg-input-label" style="font-size: 13px">
-                                    Type "{{ options.verification }}" below to confirm
+                                    {{ options.typetext }} "{{ options.verification }}"
                                 </label>
-                                <input type="text" placeholder="Verification text"
+                                <input type="text" :placeholder="options.verificationtext"
                                        v-model="input"
                                        id="dg-input-label"
                                        style="width: 100%;margin-top: 10px;
